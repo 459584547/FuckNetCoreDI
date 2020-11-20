@@ -1,0 +1,34 @@
+﻿{
+   "ContextClassName": "TestDbContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "DAL",
+   "ProjectRootNamespace": "WebApplicationTest",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "public.XZQH",
+         "ObjectType": 0
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "public.XZQH_2",
+         "ObjectType": 0
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": true,
+   "UseInflector": false,
+   "UseLegacyPluralizer": true,
+   "UseNodaTime": false,
+   "UseSpatial": false
+}
