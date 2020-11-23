@@ -23,6 +23,8 @@ using WebApplicationTest.Middleware;
 using StackExchange.Redis.Extensions.Core;
 using StackExchange.Redis.Extensions.Newtonsoft;
 using StackExchange.Redis.Extensions.Core.Configuration;
+using System.Net;
+using Microsoft.AspNetCore.Http;
 
 namespace WebApplicationTest
 {
@@ -80,6 +82,17 @@ namespace WebApplicationTest
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplicationTest v1"));
             }
+
+            app.UserRedisInformation(x =>
+            {   
+                //redis information "/redis/connectionInfo"
+                //Redis information "/redis/info"
+                //x.AllowedIPs = Array.Empty<IPAddress>();
+                x.AllowFunction = (HttpContext ctx) =>
+                {
+                    return true;
+                };
+            });
             //.net5中间件加了接口IMiddleware,实例直接从IServiceProvider中获取，
             //所以中间件的属性也注入进去了
             app.UseMiddleware<ExceptionHandlerMiddleware>();
